@@ -1,0 +1,9 @@
+.pre_loader{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    justify-content: center;
+}

@@ -1,0 +1,329 @@
+.tixCinema {
+    // padding: 70px 0;
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .cinema-row {
+        height: 700px;
+        margin-bottom: 40px;
+        overflow: hidden;
+        border-bottom: 1px solid #ebebec;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        .column-1 {
+            border: 1px solid #ebebec;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .column-2 {
+            flex: 1 1 auto;
+            .tab-content {
+                height: 100%;
+                .tab-pane {
+                    height: 100%;
+                }
+            }
+        }
+        .cinema-addr {
+            flex: 1 1 auto;
+            height: 100%;
+            .column-3 {
+                // flex: 0 1 30%;
+                width: 30%;
+                border: 1px solid rgba(238,238,238,.88);
+                border-left: none;
+                .nav {
+                    border-bottom: 0;
+                    .nav-link-t {
+                        padding: 15px 15px 15px 15px;
+                        border-radius: 0;
+                        width: 100%;
+                        position: relative;
+                        transition: all 0.3s;
+                        opacity: 0.4;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            background: rgba(238,238,238,.88);
+                            transform: translateX(-50%);
+                            width: calc(100% - 40px);
+                            height: 1px;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                        &.active {
+                            background: transparent;
+                            opacity: 1;
+                        }
+                        .item-addr {
+                            display: flex;
+                            align-items: flex-start;
+                            img {
+                                display: block;
+                                width: 50px;
+                                height: 50px;
+                            }
+                            .cinema-detail {
+                                padding-left: 10px;
+                                width: calc(100% - 50px);
+                            }
+                            p {
+                                margin-bottom: 0;
+                            }
+                            .street {
+                                color: #000;
+                                span {
+                                    color: $color-text-5;
+                                }
+                            }
+                            .address {
+                                font-size: 12px;
+                                color: $color-text-6;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            button {
+                                border: none;
+                                outline: none;
+                                background: transparent;
+                                color: $color-bg-4;
+                            }
+                        }
+                    }
+                }
+            }
+            .column-4 {
+                width: calc(100% - 30%);
+                height: 700px;
+            }
+        }
+    }
+    .cinemaLogo {
+        height: 100%;
+        border-bottom: none;
+        .nav-link {
+            width: 90px;
+            height: 90px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.2s;
+            opacity: 0.4;
+            border: none;
+            &::after {
+                content: '';
+                display: block;
+                width: calc(100% - 40px);
+                height: 2px;
+                background: rgba(238,238,238,.88);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &:hover {
+                opacity: 1;
+            }
+            &.active {
+                background: transparent;
+                opacity: 1;
+            }
+            img {
+                display: block;
+                width: 50px;
+                // height: 50px;
+            }
+        }
+    }
+}
+.tixCinema {
+    .column-4 {
+        border: 1px solid rgba(238, 238, 238, 0.88);
+        border-left: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $color-text-2;
+        }
+        .item-time {
+            padding: 15px 15px 15px 15px;
+            position: relative;            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: calc(100% - 40px);
+                height: 1px;
+                background: rgba(238,238,238,.88);
+            }
+            .movieName {
+                a {
+                    display: flex;
+                    img {
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 15px;
+                    }
+                    .detail {
+                        p {
+                            font-size: 14px;
+                            color: #000;
+                            margin-bottom: 8px;
+                            .age {
+                                font-size: $fs-12;
+                                color: #fff;
+                                background: $color-bg-4;
+                                margin-right: 8px;
+                                min-width: 35px;
+                                padding: 3px 8px;
+                                border-radius: 5px;
+                                &.green {
+                                    background: $color-bg-5;
+                                }
+                            }
+                        }
+                    }
+                    .minutes {
+                        font-size: 12px;
+                        color: $color-text-2;
+                    }
+                }
+            }
+            .movieName-collapse {
+                // padding: 15px 0;
+                // transition: all 0.5s;
+                .format {
+                    padding-top: 15px;
+                    font-size: 16px;
+                    color: $color-black;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                .movieShowtimes {
+                    display: flex;
+                    padding-bottom: 15px;
+                    a {
+                        background: rgba(246,246,246,.5);
+                        display: block;
+                        color: #9b9b9b;
+                        font-size: 14px;
+                        padding: 6px 10px;
+                        border-radius: 8px;
+                        margin-right: 8px;
+                        border: 1px solid #e4e4e4;
+                        span {
+                            font-size: 18px;
+                            color: #108f3e;
+                            font-weight: 500;
+                            &:hover{
+                                color: red;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+.tixCinema {
+    .linear {
+        float: none;
+        margin: auto;
+        clear: both;
+        max-width: 940px;
+        padding-top: 120px;
+        background: url(../../../assets/img/back-news.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 140px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .tixCinema {
+        .column-1 {
+            width: 100%;
+        }
+        .cinemaLogo {
+            flex-direction: row !important;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .cinema-row {
+            .cinema-addr {
+                .column-3 {
+                    border-left: 1px solid rgba(238, 238, 238, 0.88);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .tixCinema {
+        .cinema-row {
+            height: auto;
+            .cinema-addr {
+                .column-3 {
+                    width: 100%;
+                    border-left: 1px solid rgba(238, 238, 238, 0.88);
+                    .nav {
+                        flex-direction: row !important;
+                        .nav-link-t {
+                            width: 50%;
+                        }
+                    }
+                }
+                .column-4 {
+                    width: 100%;
+                    height: auto;
+                    overflow-y: hidden;
+                    padding-left: 15px;
+                    border-left: 1px solid rgba(238, 238, 238, 0.88);
+                    .tab-pane{
+                        height: 500px;
+                        overflow: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .tixCinema {
+        .cinema-row {
+            .cinema-addr {
+                .column-3 {
+                    .nav {
+                        .nav-link-t {
+                            width: 100%;
+                            .item-addr {
+                                .address {
+                                    white-space: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

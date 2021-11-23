@@ -1,0 +1,463 @@
+.step-checkout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%);
+    background: #fff;
+    height: 80px;
+    width: 77%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.left-steps {
+    display: flex;
+}
+
+.step-item {
+    line-height: 80px;
+    font-weight: 500;
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+.step-item.active {
+    color: #fb4226;
+}
+
+.step-number {
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+.step-user {
+    display: flex;
+    align-items: center;
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+.step--img {
+    width: 30px !important;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.checkout-info-wrap {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 23%;
+    background: #fff;
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%);
+    height: 100%;
+    padding-bottom: 150px;
+    z-index: 1;
+}
+
+.checkout-info {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 30px;
+    padding-bottom: 50px;
+}
+
+.checkout-film-info .film-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.checkout-cinema {
+    font-weight: 500;
+}
+
+.checkout-date {
+    font-weight: 500;
+}
+
+.checkout-film-info,
+.checkout-chair {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e9e9e9;
+}
+
+.checkout-film-info p {
+    margin-bottom: 5px;
+}
+
+.total-price {
+    color: #44c020;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.title {
+    font-size: 34px;
+    /* text-align: center; */
+    height: 80px;
+    line-height: 80px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e9e9e9;
+}
+
+.checkout-chair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chairs {
+    font-weight: 500;
+    color: #fb4226;
+}
+
+.checkout-user-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e9e9e9;
+    position: relative;
+}
+
+.checkout-user-item label {
+    display: block;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.checkout-user-item input {
+    color: #000;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.checkout-user-item input::placeholder {
+    color: #000;
+}
+
+.checkout-user-item .btn-apply {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #afafaf;
+    color: #fff;
+    font-size: 13px;
+}
+
+.payment-methods {
+    padding-top: 5px;
+}
+
+.img--payment {
+    width: 40px !important;
+    margin: 0 15px;
+}
+
+.payment-method-item {
+    display: flex;
+    align-items: center;
+}
+
+.payment-method-item input {
+    background: #4a90e2;
+    width: 22px;
+    height: 22px;
+    border: none;
+    outline: none;
+}
+
+.book-ticket {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.book-ticket .book-note {
+    background: #fff;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 4%;
+}
+
+.book-ticket .book-note .note {
+    color: #000;
+    font-size: 12px;
+}
+
+.book-ticket .book-note .note span {
+    color: #f79320;
+}
+
+.book-ticket .btn-book-ticket {
+    background-image: linear-gradient(223deg, #b4ec51 0, #429321 100%);
+    border: none;
+    display: block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    color: #fff;
+    padding: 0;
+}
+
+.cinema-screen {
+    width: 62%;
+    margin: auto;
+}
+
+.cinema-chairs {
+    width: 72%;
+    margin-top: 85px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.screen-title .name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin: 0 !important;
+}
+
+.screen-title .date {
+    margin: 0 !important;
+}
+
+.cinema-screen-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    color: #9b9b9b;
+}
+
+.info-left {
+    display: flex;
+    align-items: center;
+}
+
+.info-right {
+    font-size: 10px;
+}
+
+.info-right .time-delay {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fb4226;
+}
+
+.img--screen-cinema {
+    width: 50px !important;
+    margin-right: 20px;
+}
+
+.film-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    opacity: 0.7;
+}
+
+.film-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Chiar */
+
+.seat {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background: #3e515d;
+    color: #e9e9e9;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.vipSeat {
+    color: #f7b500;
+}
+
+.normalSeat {
+    color: #000;
+}
+
+.vip {
+    background: #f7b500;
+    color: black;
+}
+
+.booking {
+    background: #44c020;
+    color: black;
+}
+
+.booked {
+    color: #e9e9e9;
+    background: #dbdee0;
+    cursor: no-drop !important;
+}
+
+.seat-couple {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #b03550;
+}
+
+.seat-couple .seat {
+    background: inherit;
+    margin: 0;
+}
+
+.seat-vip {
+    background: #f7b500;
+}
+
+.seat-selected {
+    position: relative;
+    background: #e7eaec;
+}
+
+.seat-selected::after {
+    content: "x";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.seat-on-select {
+    background: #44c020;
+}
+
+.seats-wrap {
+    width: fit-content;
+    margin: auto;
+}
+
+.seats-item {
+    display: flex;
+    margin: 10px 0;
+}
+
+.seats-item .seats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.seats-row {
+    margin-right: 40px !important;
+    font-size: 16px;
+    font-weight: 700;
+    width: 20px;
+}
+
+.explain-seats {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.explain-item {
+    margin: 5px 7px;
+    width: 110px;
+}
+
+.explain-item .seat {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+.warning {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+@media screen and (max-width: 992px) {
+    .cinema-screen {
+        width: 100%;
+        margin: auto;
+    }
+    .step-checkout {
+        width: 100%;
+        z-index: 3;
+    }
+    .checkout-info-wrap {
+        position: static;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    .book-ticket {
+        position: static;
+    }
+    .film-bg {
+        display: none;
+    }
+    .cinema-chairs {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .step-item {
+        padding: 0 8px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .step-checkout {
+        padding: 0 10px;
+    }
+    .step-item {
+        font-size: 12px;
+        line-height: unset;
+    }
+    .step-number {
+        font-size: 14px;
+    }
+    /* seats */
+    .seats-row {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .seat {
+        width: 18px;
+        height: 18px;
+        margin: 0 2px;
+        border-radius: 3px;
+    }
+}

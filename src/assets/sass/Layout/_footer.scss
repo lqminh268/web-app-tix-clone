@@ -1,0 +1,85 @@
+footer {
+    background: $color-bg-7;
+    .footer-wrap {
+        border-top: 1px solid #4a4a4a;
+        padding: 20px 0 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .footer-item {
+            color: #fff;
+            img {
+                display: block;
+                width: 90px;
+            }
+            &.footer-zion {
+                img {
+                    border-radius: 5px;
+                }
+            }
+            &.footer-about {
+                flex:  1 1 auto;
+                padding-left: 50px;
+                h4 {
+                  margin-bottom: 0;
+                  font-size: 12px;
+                  color: #fff;
+                  line-height: 1.8;
+                  font-weight: 500;  
+                }
+                p {
+                    font-size: 12px;
+                    color: #949494;
+                    line-height: 1.8;
+                    margin-bottom: 0;
+                    a {
+                        margin-left: 8px;
+                        color: $color-bg-4;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            &.footer-baohanh {
+                img {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    footer {
+        .footer-wrap {
+            max-width: 98%;
+            padding-left: 10px;
+            padding-right: 10px;
+            .footer-item {
+                &.footer-about {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    footer {
+        .footer-wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+            .footer-item {
+                flex: 0 1 100%;
+                img {
+                    margin: 10px auto 20px;
+                }
+                &.footer-about {
+                    padding-left: 0px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

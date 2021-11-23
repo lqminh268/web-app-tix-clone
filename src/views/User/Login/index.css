@@ -1,0 +1,32 @@
+.form-sign-in-up {
+    background-image: url("../../../assets/img/bg-signupin.jpg");
+    background-size: contain;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.form-sign-in {
+    background: linear-gradient(to bottom,rgba(20,50,93,.9),rgba(8,22,48,.9));
+    width: 360px;
+    padding: 30px;
+    color: #fff;
+}
+.form-sign-in .btn {
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid rgba(20,50,93,1);
+}
+.logo-form img{
+    padding: 0px 0px 30px;
+    width: 150px;
+    margin: auto;
+}
+.form-sign-in .btn:hover {
+    border: 1px solid #fa5238;
+    color: #fa5238;
+}

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "cybersoft-movie",
+    "staging": "cybersoft-movie"
+  }
+}

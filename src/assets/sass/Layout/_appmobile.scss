@@ -1,0 +1,111 @@
+.tixApp {
+    padding: 120px 0 80px;
+    background: url('../../img/background-app.jpg');
+    .tixApp-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .app-item {
+            // flex: 0 1 50%;
+            color: #fff;
+        }
+        .app-left {
+            flex: 0 1 40%;
+            h1 {
+                font-size: 32px;
+                line-height: 1.5;
+                margin-bottom: 40px;
+            }
+            p {
+                font-size: 16px;
+                color: #fff;
+                padding: 0px 0 15px;
+            }
+            button {
+                background: $color-bg-4;
+                font-weight: 700;
+                padding: 10px 20px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 16px;
+            }
+            .down {
+                font-size: 14px;
+                padding-top: 15px;
+                a {
+                    font-size: 14px;
+                    color: #fff;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+        .app-right {
+            flex: 0 1 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .phone-img {
+                width: 195px;
+                position: relative;
+                & > img {
+                    display: block;
+                    width: 100%;
+                }
+                .slide-img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 95%;
+                    height: 96%;
+                    .tixAppCarousel {
+                        height: 100%;
+                        .owl-stage-outer {
+                            height: 100%;
+                            border-radius: 20px;
+                            .owl-item {
+                                img {
+                                    border-radius: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:992px) {
+    .tixApp {
+        .tixApp-wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+            .app-left {
+                flex: 0 1 100%;
+                text-align: center;
+            }
+            .app-right {
+                flex: 0 1 100%;
+                .phone-img {
+                    width: 260px;
+                    .slide-img {
+                        .tixAppCarousel {
+                            height: 100%;
+                            .owl-stage-outer {
+                                height: 100%;
+                                .owl-item {
+                                    img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

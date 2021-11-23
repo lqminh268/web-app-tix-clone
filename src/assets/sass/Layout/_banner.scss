@@ -1,0 +1,198 @@
+// Carousel images
+#carousel {
+  margin-top: 60px;
+  position: relative;
+  .slick-slider {
+    .slick-arrow {
+      width: 50px;
+      height: 100px;
+      z-index: 3;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      &::before {
+        content: "";
+      }
+    }
+    .slick-prev {
+      left: 15px;
+      top: 45%;
+      background-image: url("https://tix.vn/app/assets/img/icons/back-session.png");
+    }
+    .slick-next {
+      right: 15px;
+      top: 45%;
+      background-image: url("https://tix.vn/app/assets/img/icons/next-session.png");
+    }
+  }
+  .item {
+    position: relative;
+    min-width: 768px;
+    min-height: auto;
+    a {
+        width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .backgroundLinear {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #000, transparent 20%);
+      top: 0;
+    }
+
+    .play {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      .venobox {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &:hover {
+      .play {
+        visibility: visible;
+      }
+    }
+  }
+}
+.modal-video-close-btn {
+  position: absolute;
+  z-index: 2;
+  top: -65px;
+  right: -35px;
+  display: inline-block;
+  width: 40px;
+  height: 70px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+}
+.modal-video-close-btn::before {
+  content: url(../../img/close.png) !important;
+  background: unset;
+  transform: unset !important;
+}
+.modal-video-close-btn::after {
+  content: unset;
+  background: unset;
+}
+// Banner Book Dropdown
+.bannerTix {
+  .banner__book {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    max-width: 940px;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    border-radius: 6px;
+    box-shadow: 0 0 5px 0px #000;
+    .dropdown {
+      // flex: 0 1 calc(70% / 4);
+      width: calc(70% / 4);
+      border-right: 1px solid $color-border-2;
+      .dropdown-menu.show {
+        box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.4);
+        max-height: 300px;
+        overflow: auto;
+      }
+      button {
+        width: 100%;
+        text-align: left;
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+        &::after {
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .btn:focus {
+        box-shadow: none;
+      }
+      .dropdown-item {
+        span {
+          display: block;
+          &:last-child {
+            color: #aaa;
+            font-size: 11px;
+          }
+        }
+        &:hover {
+          background: $color-bg-8;
+          color: #fff;
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+    #movies-dropdown {
+      // flex: 0 1 30%;
+      flex-grow: 1;
+      width: 30%;
+    }
+    .banner__btn {
+      // flex: 0 1 calc(70% / 4);
+      width: calc(70% / 4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: #fff;
+        background: $color-bg-2;
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1030px) {
+  .modal-video-close-btn {
+    position: absolute;
+    z-index: 2;
+    top: -70px;
+    right: 0px;
+    display: inline-block;
+    width: 40px;
+    height: 70px;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+  }
+}
+@media screen and (max-width: 992px) {
+  .bannerTix {
+      display: none;
+    .banner__book {
+      display: none;
+    }
+  }
+}
