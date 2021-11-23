@@ -30,7 +30,7 @@ const listCarousel = [
 
 const settings = {
   className: "tixCarrousel",
-  // autoplay: true,
+  autoplay: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
