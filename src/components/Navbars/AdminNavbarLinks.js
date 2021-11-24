@@ -56,7 +56,7 @@ export default function AdminNavbarLinks() {
     localStorage.clear();
     dispatch(createAction(SET_LOGIN, {}));
     dispatch(createAction(IS_LOGIN, false));
-    history.push("/login");
+    history.push("/");
   };
   return (
     <div>

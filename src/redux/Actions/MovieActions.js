@@ -192,7 +192,7 @@ export const deleteMovie = (maPhim) => {
           dispatch(createAction(SET_DELETED, true));
         })
         .catch((err) => {
-          if (err.response.status) {
+          if (err) {
             Swal.fire({
               title: "Oops !!!",
               text: `${err.response?.data} !!!`,
